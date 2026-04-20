@@ -28,29 +28,31 @@ A Claude Code plugin and agent agnostic skill that pressure-tests your ideas. Bu
 
 ### Default Claude
 
-> **you:** claude code is better than codex
+> **❯ you:** claude code is better than codex
 >
-> **claude:** Noted.
+> **⏺ claude:** Noted.
 
 </td>
 <td width="50%">
 
-### Claude with `objection`
+### ⚖️ Claude with `objection`
 
-> **you:** claude code is better than codex
+> **❯ you:** claude code is better than codex
 >
-> **claude:** That's a claim, not an argument. Want me to cross-examine it via `/objection`, or are you just venting?
+> **⏺ claude:** That's a claim, not an argument. Want me to cross-examine it via `/objection`, or are you just venting?
 >
-> **you:** /objection
+> **❯ you:** /objection
 >
-> **claude:** The claim: Claude Code is better than Codex.
+> **⏺ claude:** The claim: Claude Code is better than Codex.
 >
 > Objection — missing evidence. "Better" on what axis, measured how? Code quality on a benchmark, latency, cost per task, tool-use reliability? Without a metric and a number, this is preference dressed as fact.
 
 </td>
 </tr>
-<tr>
-<td>
+
+</table>
+
+---
 
 ## Why this exists
 
@@ -230,26 +232,11 @@ objection/
 ├── skills/
 │   ├── objection/
 │   │   └── SKILL.md         # persona, rules, concession logic
-│   └── verdict/
-│       └── SKILL.md         # verdict artifact rendering
 ├── commands/
 │   ├── objection.md         # /objection slash command
 │   └── verdict.md             # /verdict slash command
 └── README.md
 ```
-
----
-
-## How it compares
-
-| Skill             | Posture                       | Win condition                             |
-|-------------------|-------------------------------|-------------------------------------------|
-| `rubber-duck`     | Listens, reflects             | You figure it out yourself                |
-| `socratic-debate` | Asks questions, neutral       | Mutual exploration                        |
-| `grill-me`        | Quizzes on knowledge          | You demonstrate understanding             |
-| **`objection`**   | **Adversarial, holds ground** | **You convince it — or it rules against** |
-
-The difference: `objection` has an explicit losing condition for you, and a **verdict artifact** designed to be screenshot-able. If you can't convince the reviewer, you walk out with a document that names the specific hole in your argument.
 
 ---
 
