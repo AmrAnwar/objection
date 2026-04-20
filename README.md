@@ -15,7 +15,7 @@
 
 ---
 
-A Claude Code plugin and agent agnostic skill that pressure-tests your ideas. Built for programmers first — code changes, architecture, refactors, migrations — but works on any proposal (design, business, product). It treats every idea as a claim that must be defended on the merits. One substantive objection per turn. No approval until every objection is answered. Ends with a shareable **VERDICT**.
+A Claude Code plugin and agent agnostic skill that pressure-tests your ideas. Built for programmers first (code changes, architecture, refactors, migrations) but works on any proposal like design, business, or product. It treats every idea as a claim that must be defended on the merits. One substantive objection per turn. No approval until every objection is answered. Ends with a shareable **VERDICT**.
 
 ---
 
@@ -42,7 +42,7 @@ A Claude Code plugin and agent agnostic skill that pressure-tests your ideas. Bu
 >
 > **❯ you:** /objection
 >
-> ⏺ claude: Objection — missing evidence. "Better" on what axis, measured how? Code quality on a benchmark, latency, cost per task, tool-use reliability? Without a metric and a number, this is preference dressed as fact.
+> ⏺ claude: Objection, missing evidence. "Better" on what axis, measured how? Code quality on a benchmark, latency, cost per task, tool-use reliability? Without a metric and a number, this is preference dressed as fact.
 
 </td>
 </tr>
@@ -55,21 +55,21 @@ A Claude Code plugin and agent agnostic skill that pressure-tests your ideas. Bu
 
 Claude, by default, is collaborative. That's great for most work and terrible for pressure-testing an idea. When you want a second opinion that actually pushes back, "what could go wrong with this?" produces a polite list, not a real challenge.
 
-`objection` flips the posture. Claude becomes an adversarial reviewer. Your job is to defend the claim. Its job is to make you prove it — and to refuse to fold for loudness, authority, or vague reassurance.
+`objection` flips the posture. Claude becomes an adversarial reviewer. Your job is to defend the claim. Its job is to make you prove it, and to refuse to fold for loudness, authority, or vague reassurance.
 
 ---
 
 ## Install
 
-### Claude Code — native plugin
+### Claude Code: native plugin
 
-#### Option 1 — marketplace
+#### Option 1: marketplace
 
 ```bash
 claude plugin marketplace add AmrAnwar/objection && claude plugin install objection
 ```
 
-#### Option 2 — user plugin directory (recommended for personal use)
+#### Option 2: user plugin directory (recommended for personal use)
 
 ```bash
 git clone https://github.com/AmrAnwar/objection ~/.claude/plugins/objection
@@ -77,7 +77,7 @@ git clone https://github.com/AmrAnwar/objection ~/.claude/plugins/objection
 
 Restart Claude Code. The skill and `/objection` command are now available.
 
-#### Option 3 — project plugin (team-wide)
+#### Option 3: project plugin (team-wide)
 
 ```bash
 git clone https://github.com/AmrAnwar/objection .claude/plugins/objection
@@ -85,7 +85,7 @@ git clone https://github.com/AmrAnwar/objection .claude/plugins/objection
 
 Commit to your repo. Everyone on has access to the team repository gets it on next session start.
 
-### Any agent — via `npx skills`
+### Any agent: via `npx skills`
 
 Works in Cursor, Codex, Windsurf, Amp, Claude Code, and anything else supported by Anthropic's skills CLI.
 
@@ -170,13 +170,13 @@ you: /objection We should add a Redis cache in front of the users table to speed
 claude: The claim: a Redis cache in front of the users table will meaningfully speed
         up the profile endpoint.
 
-        Objection — missing evidence. What is the current p50 and p95 latency of
+        Objection, missing evidence. What is the current p50 and p95 latency of
         the profile endpoint, and what fraction of that is database time? Without
         that, we don't know whether caching is treating the right bottleneck.
 
 you: It'll definitely help, profile queries are slow.
 
-claude: Overruled — the evidence objection stands. "Slow" is not a number and
+claude: Overruled, the evidence objection stands. "Slow" is not a number and
         "definitely" is not a measurement. Cite a profile, a trace, or a query
         time. Otherwise the claim that caching addresses the bottleneck is
         unsupported.
@@ -185,7 +185,7 @@ you: p95 is 480ms, of which 410ms is the join against user_prefs. Trace attached
 
 claude: Sustained on evidence. The bottleneck is real and sits in the DB.
 
-        Objection — unexamined tradeoff. Cache invalidation on profile edits.
+        Objection, unexamined tradeoff. Cache invalidation on profile edits.
         A user updates their display name and sees the old value on the next
         page load. What's the invalidation strategy, and what staleness is
         acceptable?
@@ -200,8 +200,8 @@ claude: ════════════════════════
           A Redis cache in front of the users table will speed up the profile endpoint.
 
         OBJECTIONS
-          1. Missing evidence of bottleneck — resolved
-          2. Cache invalidation strategy — unresolved
+          1. Missing evidence of bottleneck: resolved
+          2. Cache invalidation strategy: unresolved
 
         RESULT: FAILED
 
