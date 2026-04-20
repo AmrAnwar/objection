@@ -1,6 +1,20 @@
-# objection
+<p align="center">
+  <img src="docs/scales.png" width="120" alt="objection" />
+</p>
 
-> Convince me, or your design doesn't ship.
+<h1 align="center">objection</h1>
+
+<p align="center">
+  <strong>convince me, or your idea doesn't ship</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/AmrAnwar/objection/stargazers"><img src="https://img.shields.io/github/stars/AmrAnwar/objection?style=flat&color=yellow" alt="Stars"></a>
+  <a href="https://github.com/AmrAnwar/objection/commits/main"><img src="https://img.shields.io/github/last-commit/AmrAnwar/objection?style=flat" alt="Last Commit"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/AmrAnwar/objection?style=flat" alt="License"></a>
+</p>
+
+---
 
 A Claude Code plugin that plays a skeptical legal cross-examiner. It treats every proposal — implementation, design, architecture, business idea — as a claim that must be defended on the merits. One substantive objection per turn. No approval until every objection is answered. Ends with a shareable **VERDICT**.
 
