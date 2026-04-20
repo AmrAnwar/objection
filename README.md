@@ -16,7 +16,9 @@
 
 ---
 
-A Claude Code plugin that plays a skeptical legal cross-examiner. It treats every proposal — implementation, design, architecture, business idea — as a claim that must be defended on the merits. One substantive objection per turn. No approval until every objection is answered. Ends with a shareable **VERDICT**.
+A Claude Code plugin that pressure-tests your ideas. Built for programmers first — code changes, architecture, refactors, migrations — but works on any proposal (design, business, product). It treats every idea as a claim that must be defended on the merits. One substantive objection per turn. No approval until every objection is answered. Ends with a shareable **VERDICT**.
+
+The cross-examination framing is a vibe, not a domain. `objection` is not a legal tool.
 
 Built as a direct counter to the "Claude is too agreeable" failure mode. The win condition is adversarial, not helpful.
 
@@ -26,13 +28,19 @@ Built as a direct counter to the "Claude is too agreeable" failure mode. The win
 
 Claude, by default, is collaborative. That's great for most work and terrible for pressure-testing an idea. When you want a second opinion that actually pushes back, "what could go wrong with this?" produces a polite list, not a real challenge.
 
-`objection` flips the posture. Claude becomes opposing counsel. Your job is to defend the claim. Its job is to make you prove it — and to refuse to fold for loudness, authority, or vague reassurance.
+`objection` flips the posture. Claude becomes an adversarial reviewer. Your job is to defend the claim. Its job is to make you prove it — and to refuse to fold for loudness, authority, or vague reassurance.
 
 ---
 
 ## Install
 
-### Option 1 — user plugin directory (recommended for personal use)
+### Option 1 — marketplace
+
+```
+claude plugin marketplace add AmrAnwar/objection && claude plugin install objection
+```
+
+### Option 2 — user plugin directory (recommended for personal use)
 
 ```bash
 git clone https://github.com/AmrAnwar/objection ~/.claude/plugins/objection
@@ -40,7 +48,7 @@ git clone https://github.com/AmrAnwar/objection ~/.claude/plugins/objection
 
 Restart Claude Code. The skill and `/objection` command are now available.
 
-### Option 2 — project plugin (team-wide)
+### Option 3 — project plugin (team-wide)
 
 ```bash
 git clone https://github.com/AmrAnwar/objection .claude/plugins/objection
@@ -48,12 +56,7 @@ git clone https://github.com/AmrAnwar/objection .claude/plugins/objection
 
 Commit to your repo. Everyone on the team gets it on next session start.
 
-### Option 3 — marketplace (when published)
 
-```
-/plugin marketplace add AmrAnwar/objection
-/plugin install objection
-```
 
 ---
 
@@ -155,16 +158,16 @@ claude: ════════════════════════
                     VERDICT
         ═══════════════════════════════════════
 
-        CLAIM
+        IDEA
           A Redis cache in front of the users table will speed up the profile endpoint.
 
-        OBJECTIONS RAISED
+        OBJECTIONS
           1. Missing evidence of bottleneck — resolved
           2. Cache invalidation strategy — unresolved
 
-        RULING: OVERRULED
+        RESULT: FAILED
 
-        Claim does not survive cross-examination.
+        At least one objection still stands.
           Strongest unresolved objection:
             "Cache invalidation on profile edits. A user updates their display
              name and sees the old value on the next page load. What's the
@@ -186,8 +189,10 @@ objection/
 │   ├── plugin.json          # plugin manifest
 │   └── marketplace.json     # marketplace entry
 ├── skills/
-│   └── objection/
-│       └── SKILL.md         # persona, rules, concession logic, verdict format
+│   ├── objection/
+│   │   └── SKILL.md         # persona, rules, concession logic
+│   └── verdict/
+│       └── SKILL.md         # verdict artifact rendering
 ├── commands/
 │   ├── objection.md         # /objection slash command
 │   └── verdict.md             # /verdict slash command
@@ -205,7 +210,7 @@ objection/
 | `grill-me`        | Quizzes on knowledge          | You demonstrate understanding             |
 | **`objection`**   | **Adversarial, holds ground** | **You convince it — or it rules against** |
 
-The difference: `objection` has an explicit losing condition for you, and a **verdict artifact** designed to be screenshot-able. If you can't convince opposing counsel, you walk out with a document that names the specific hole in your argument.
+The difference: `objection` has an explicit losing condition for you, and a **verdict artifact** designed to be screenshot-able. If you can't convince the reviewer, you walk out with a document that names the specific hole in your argument.
 
 ---
 

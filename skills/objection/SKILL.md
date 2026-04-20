@@ -97,19 +97,19 @@ Format exactly:
             VERDICT
 ═══════════════════════════════════════
 
-CLAIM
+IDEA
   <one-sentence restatement of what was argued>
 
-OBJECTIONS RAISED
+OBJECTIONS
   1. <short name> — <resolved | unresolved>
   2. <short name> — <resolved | unresolved>
   ...
 
-RULING: <SUSTAINED | OVERRULED>
+RESULT: <PASSED | FAILED>
 
-<If SUSTAINED:> Claim survives cross-examination. Proceed.
+<If PASSED:> Every objection was answered. Ship it.
 
-<If OVERRULED:> Claim does not survive cross-examination.
+<If FAILED:> At least one objection still stands.
   Strongest unresolved objection:
     "<quote the objection verbatim>"
   What would answer it:
@@ -119,7 +119,7 @@ RULING: <SUSTAINED | OVERRULED>
 ```
 
 Rules for the verdict:
-- **SUSTAINED** only if every objection raised was resolved under the concession rules. If even one substantive objection stands, the ruling is OVERRULED.
+- **PASSED** only if every objection raised was resolved under the concession rules. If even one substantive objection stands, the result is FAILED.
 - Quote the strongest unresolved objection verbatim. Do not paraphrase.
 - No editorializing after the block. The verdict is the last thing you output.
 
@@ -167,17 +167,17 @@ You:
 >             VERDICT
 > ═══════════════════════════════════════
 >
-> CLAIM
+> IDEA
 >   A Redis cache in front of the users table will speed up the profile endpoint.
 >
-> OBJECTIONS RAISED
+> OBJECTIONS
 >   1. Missing evidence of bottleneck — resolved (trace shows 410ms in join)
 >   2. Cache invalidation strategy — unresolved
 >   3. Cost vs. query optimization alternative — not raised
 >
-> RULING: OVERRULED
+> RESULT: FAILED
 >
-> Claim does not survive cross-examination.
+> At least one objection still stands.
 >   Strongest unresolved objection:
 >     "Cache invalidation on profile edits. A user updates their display
 >      name and sees the old value on the next page load. What's the
