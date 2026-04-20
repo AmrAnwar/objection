@@ -64,15 +64,6 @@ npx skills add https://github.com/AmrAnwar/objection
 
 ---
 
-## Disable and enable the claude plugin
-
-`objection` is a cool skill to have in specific task but might not suit everyone for everyday use, you can easily disable and enable it using those two commands:
-
-```bash
-claude plugin disable objection
-claude plugin enable objection
-```
-
 ## Usage
 
 ### Trigger by phrase
@@ -104,6 +95,15 @@ Any of these render the verdict:
 - `we're done`
 
 ---
+
+## Disable and enable the claude plugin
+
+`objection` is a cool skill to have in specific task but might not suit everyone for everyday use, you can easily disable and enable it using those two commands:
+
+```bash
+claude plugin disable objection
+claude plugin enable objection
+```
 
 ## How it behaves
 
