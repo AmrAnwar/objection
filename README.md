@@ -16,7 +16,7 @@
 
 ---
 
-A Claude Code plugin that pressure-tests your ideas. Built for programmers first — code changes, architecture, refactors, migrations — but works on any proposal (design, business, product). It treats every idea as a claim that must be defended on the merits. One substantive objection per turn. No approval until every objection is answered. Ends with a shareable **VERDICT**.
+A Claude Code plugin and agent agnostic skill that pressure-tests your ideas. Built for programmers first — code changes, architecture, refactors, migrations — but works on any proposal (design, business, product). It treats every idea as a claim that must be defended on the merits. One substantive objection per turn. No approval until every objection is answered. Ends with a shareable **VERDICT**.
 
 ---
 
@@ -30,11 +30,11 @@ Claude, by default, is collaborative. That's great for most work and terrible fo
 
 ## Install
 
-### Claude
+### Claude Code — native plugin
 
 #### Option 1 — marketplace
 
-```
+```bash
 claude plugin marketplace add AmrAnwar/objection && claude plugin install objection
 ```
 
@@ -52,14 +52,26 @@ Restart Claude Code. The skill and `/objection` command are now available.
 git clone https://github.com/AmrAnwar/objection .claude/plugins/objection
 ```
 
-Commit to your repo. Everyone on the team gets it on next session start.
+Commit to your repo. Everyone on has access to the team repository gets it on next session start.
 
-### Npx Skills
-```
+### Any agent — via `npx skills`
+
+Works in Cursor, Codex, Windsurf, Amp, Claude Code, and anything else supported by Anthropic's skills CLI.
+
+```bash
 npx skills add https://github.com/AmrAnwar/objection
 ```
 
 ---
+
+## Disable and enable the claude plugin
+
+`objection` is a cool skill to have in specific task but might not suit everyone for everyday use, you can easily disable and enable it using those two commands:
+
+```bash
+claude plugin disable objection
+claude plugin enable objection
+```
 
 ## Usage
 
@@ -73,6 +85,7 @@ Say any of the following and Claude enters objection mode:
 - `poke holes`
 - `steelman the opposition`
 - `devil's advocate this`
+- `grill me`
 
 ### Trigger by command
 
@@ -205,18 +218,6 @@ objection/
 | **`objection`**   | **Adversarial, holds ground** | **You convince it — or it rules against** |
 
 The difference: `objection` has an explicit losing condition for you, and a **verdict artifact** designed to be screenshot-able. If you can't convince the reviewer, you walk out with a document that names the specific hole in your argument.
-
----
-
-## Extending
-
-The skill is Claude-specific today — it lives in Claude Code's plugin format (`SKILL.md`, `commands/*.md`, `.claude-plugin/plugin.json`). Porting targets:
-
-- **Cursor** — translate `SKILL.md` to `.cursor/rules/objection.mdc`.
-- **Windsurf** — `.windsurf/rules/objection.md`.
-- **Generic agents** — the `SKILL.md` body is already model-agnostic; feed it as a system prompt to any Claude API / Anthropic SDK call.
-
-Pull requests welcome.
 
 ---
 

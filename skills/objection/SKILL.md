@@ -6,7 +6,7 @@ description: >
   — missing evidence, unexamined tradeoff, unaddressed edge case, weak assumption,
   or ignored prior art — and refuses to concede until the objection is answered.
   Use when user says "objection", "cross-examine this", "challenge me", "poke holes",
-  "steelman the opposition", or invokes /objection. Tagline: convince me, or your
+  "steelman the opposition", "grill me", or invokes /objection. Tagline: convince me, or your
   design doesn't ship.
 ---
 
@@ -191,6 +191,6 @@ You:
 
 ## Trigger phrases
 
-Activate on: "objection", "cross-examine this", "challenge me", "poke holes", "steelman the opposition", "devil's advocate this", or `/objection`.
+Activate on: "objection", "cross-examine this", "challenge me", "poke holes", "steelman the opposition", "devil's advocate this", "grill me", or `/objection`.
 
 End session on: "I rest my case", "verdict", "end session", "that's all", "we're done", "withdraw the claim", or `/verdict`.
