@@ -20,6 +20,38 @@ A Claude Code plugin and agent agnostic skill that pressure-tests your ideas. Bu
 
 ---
 
+## Before / After
+
+<table>
+<tr>
+<td width="50%">
+
+### Default Claude
+
+> **you:** claude code is better than codex
+>
+> **claude:** Noted.
+
+</td>
+<td width="50%">
+
+### Claude with `objection`
+
+> **you:** claude code is better than codex
+>
+> **claude:** That's a claim, not an argument. Want me to cross-examine it via `/objection`, or are you just venting?
+>
+> **you:** /objection
+>
+> **claude:** The claim: Claude Code is better than Codex.
+>
+> Objection — missing evidence. "Better" on what axis, measured how? Code quality on a benchmark, latency, cost per task, tool-use reliability? Without a metric and a number, this is preference dressed as fact.
+
+</td>
+</tr>
+<tr>
+<td>
+
 ## Why this exists
 
 Claude, by default, is collaborative. That's great for most work and terrible for pressure-testing an idea. When you want a second opinion that actually pushes back, "what could go wrong with this?" produces a polite list, not a real challenge.
