@@ -20,8 +20,6 @@ A Claude Code plugin that pressure-tests your ideas. Built for programmers first
 
 The cross-examination framing is a vibe, not a domain. `objection` is not a legal tool.
 
-Built as a direct counter to the "Claude is too agreeable" failure mode. The win condition is adversarial, not helpful.
-
 ---
 
 ## Why this exists
@@ -34,13 +32,15 @@ Claude, by default, is collaborative. That's great for most work and terrible fo
 
 ## Install
 
-### Option 1 — marketplace
+### Claude
+
+#### Option 1 — marketplace
 
 ```
 claude plugin marketplace add AmrAnwar/objection && claude plugin install objection
 ```
 
-### Option 2 — user plugin directory (recommended for personal use)
+#### Option 2 — user plugin directory (recommended for personal use)
 
 ```bash
 git clone https://github.com/AmrAnwar/objection ~/.claude/plugins/objection
@@ -48,7 +48,7 @@ git clone https://github.com/AmrAnwar/objection ~/.claude/plugins/objection
 
 Restart Claude Code. The skill and `/objection` command are now available.
 
-### Option 3 — project plugin (team-wide)
+#### Option 3 — project plugin (team-wide)
 
 ```bash
 git clone https://github.com/AmrAnwar/objection .claude/plugins/objection
@@ -56,7 +56,10 @@ git clone https://github.com/AmrAnwar/objection .claude/plugins/objection
 
 Commit to your repo. Everyone on the team gets it on next session start.
 
-
+### Npx Skills
+```
+npx skills add https://github.com/AmrAnwar/objection
+```
 
 ---
 
@@ -79,12 +82,6 @@ Say any of the following and Claude enters objection mode:
 /objection We should migrate the jobs queue from Redis to SQS.
 ```
 
-Or with no argument — Claude will prompt you to state the claim:
-
-```
-/objection
-```
-
 ### End the session
 
 Any of these render the verdict:
@@ -94,7 +91,6 @@ Any of these render the verdict:
 - `end session`
 - `that's all`
 - `we're done`
-- `/verdict`
 
 ---
 
