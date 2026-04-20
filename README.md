@@ -189,8 +189,8 @@ objection/
 │   └── objection/
 │       └── SKILL.md         # persona, rules, concession logic, verdict format
 ├── commands/
-│   ├── objection.toml       # /objection slash command
-│   └── verdict.toml         # /verdict slash command
+│   ├── objection.md         # /objection slash command
+│   └── verdict.md             # /verdict slash command
 └── README.md
 ```
 
@@ -211,7 +211,7 @@ The difference: `objection` has an explicit losing condition for you, and a **ve
 
 ## Extending
 
-The skill is Claude-specific today — it lives in Claude Code's plugin format (`SKILL.md`, `commands/*.toml`, `.claude-plugin/plugin.json`). Porting targets:
+The skill is Claude-specific today — it lives in Claude Code's plugin format (`SKILL.md`, `commands/*.md`, `.claude-plugin/plugin.json`). Porting targets:
 
 - **Cursor** — translate `SKILL.md` to `.cursor/rules/objection.mdc`.
 - **Windsurf** — `.windsurf/rules/objection.md`.

@@ -1,5 +1,7 @@
-description = "End the cross-examination and render the verdict. SUSTAINED only if every raised objection was resolved; otherwise OVERRULED with the strongest unresolved objection quoted."
-prompt = """
+---
+description: End the cross-examination and render the verdict. SUSTAINED only if every raised objection was resolved; otherwise OVERRULED with the strongest unresolved objection quoted.
+---
+
 The cross-examination is over. Render the verdict artifact now, in the exact format defined in the objection skill.
 
 Required format:
@@ -32,4 +34,3 @@ Rules:
 - SUSTAINED only if every substantive objection raised was resolved under the concession rules. Any single unresolved objection means OVERRULED.
 - Quote the strongest unresolved objection verbatim. Do not paraphrase.
 - Output only the verdict block. No preamble, no postscript.
-"""
