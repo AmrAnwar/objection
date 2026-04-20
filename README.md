@@ -1,7 +1,6 @@
 <p align="center">
-  <img src="docs/scales.png" width="120" alt="objection" />
+  <img src="docs/scales.png" width="160" alt="objection" />
 </p>
-
 <h1 align="center">objection</h1>
 
 <p align="center">
