@@ -21,7 +21,7 @@ Claude, by default, is collaborative. That's great for most work and terrible fo
 ### Option 1 — user plugin directory (recommended for personal use)
 
 ```bash
-git clone https://github.com/<you>/objection ~/.claude/plugins/objection
+git clone https://github.com/AmrAnwar/objection ~/.claude/plugins/objection
 ```
 
 Restart Claude Code. The skill and `/objection` command are now available.
@@ -29,7 +29,7 @@ Restart Claude Code. The skill and `/objection` command are now available.
 ### Option 2 — project plugin (team-wide)
 
 ```bash
-git clone https://github.com/<you>/objection .claude/plugins/objection
+git clone https://github.com/AmrAnwar/objection .claude/plugins/objection
 ```
 
 Commit to your repo. Everyone on the team gets it on next session start.
@@ -37,7 +37,7 @@ Commit to your repo. Everyone on the team gets it on next session start.
 ### Option 3 — marketplace (when published)
 
 ```
-/plugin marketplace add <you>/objection
+/plugin marketplace add AmrAnwar/objection
 /plugin install objection
 ```
 

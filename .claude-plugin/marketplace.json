@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "objection",
+  "description": "Adversarial cross-examiner mode for Claude Code. Convince Claude, or your design doesn't ship.",
+  "owner": {
+    "name": "Amro Abdalla",
+    "url": "https://github.com/AmrAnwar"
+  },
+  "plugins": [
+    {
+      "name": "objection",
+      "description": "Cross-examiner that raises one substantive objection per turn and refuses to concede to authority, vibes, or repetition. Ends with a shareable verdict.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

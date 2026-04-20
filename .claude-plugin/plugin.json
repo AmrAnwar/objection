@@ -1,0 +1,8 @@
+{
+  "name": "objection",
+  "description": "Adversarial cross-examiner mode. Claude plays opposing counsel — one substantive objection per turn, no approval until every objection is answered. Counters the 'Claude is too agreeable' failure mode by design.",
+  "author": {
+    "name": "Amro Abdalla",
+    "url": "https://github.com/AmrAnwar"
+  }
+}
