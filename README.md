@@ -18,8 +18,6 @@
 
 A Claude Code plugin that pressure-tests your ideas. Built for programmers first — code changes, architecture, refactors, migrations — but works on any proposal (design, business, product). It treats every idea as a claim that must be defended on the merits. One substantive objection per turn. No approval until every objection is answered. Ends with a shareable **VERDICT**.
 
-The cross-examination framing is a vibe, not a domain. `objection` is not a legal tool.
-
 ---
 
 ## Why this exists
