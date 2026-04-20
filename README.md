@@ -43,7 +43,7 @@ A Claude Code plugin and agent agnostic skill that pressure-tests your ideas. Bu
 >
 > **❯ you:** /objection
 >
-> Objection — missing evidence. "Better" on what axis, measured how? Code quality on a benchmark, latency, cost per task, tool-use reliability? Without a metric and a number, this is preference dressed as fact.
+> ⏺ claude: Objection — missing evidence. "Better" on what axis, measured how? Code quality on a benchmark, latency, cost per task, tool-use reliability? Without a metric and a number, this is preference dressed as fact.
 
 </td>
 </tr>
