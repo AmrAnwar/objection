@@ -111,7 +111,7 @@ Say any of the following and Claude enters objection mode:
 
 ### Trigger by command
 
-```
+```bash
 /objection We should migrate the jobs queue from Redis to SQS.
 ```
 
@@ -124,6 +124,12 @@ Any of these render the verdict:
 - `end session`
 - `that's all`
 - `we're done`
+
+### Trigger end by command
+
+```bash
+/verdict 
+```
 
 ---
 
