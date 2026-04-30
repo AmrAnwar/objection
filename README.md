@@ -17,8 +17,6 @@
 
 A Claude Code plugin and agent‑agnostic skill that pressure‑tests your ideas **and your code**. Built for programmers first — it cross‑examines designs, refactors, migrations, **diffs, and pull requests** — but works on any proposal (business, product, architecture). It treats every claim, including the implicit *"this code is ready to merge"*, as something that must be defended on the merits. One substantive objection per turn. No approval until every objection is answered. Ends with a shareable **VERDICT**.
 
-Use it on a proposal, a diff, or a PR — same posture, same discipline.
-
 <p align="center">
   <img src="docs/graph-multi-agent-debate.png" width="720" alt="Multi-agent debate accuracy gains" />
   <br/>
